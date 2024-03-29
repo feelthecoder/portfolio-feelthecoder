@@ -1,0 +1,100 @@
+.bubbles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    /* Use viewport width */
+    height: 100vh;
+    /* Use viewport height */
+    z-index: 1;
+    /* Move the bubbles behind other content */
+    pointer-events: none;
+    /* Allow clicks to pass through bubbles */
+    overflow: hidden;
+    /* Hide overflow */
+}
+
+.bubble {
+    position: absolute;
+    background-color: rgb(80, 177, 246);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: bubble 20s infinite;
+    pointer-events: none;
+    /* Allow clicks to pass through bubbles */
+}
+
+@keyframes bubble {
+    0% {
+        transform: translateY(100vh) translateX(calc(100vw * var(--x)));
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) translateX(calc(100vw * var(--x) + var(--tx)));
+        opacity: 0;
+    }
+}
+
+
+/* Set random X values for each bubble */
+
+.bubble:nth-child(1) {
+    --x: 0.1;
+    --tx: -50vw;
+    animation-delay: 0s;
+}
+
+.bubble:nth-child(2) {
+    --x: 0.2;
+    --tx: -25vw;
+    animation-delay: 1s;
+}
+
+.bubble:nth-child(3) {
+    --x: 0.3;
+    --tx: -75vw;
+    animation-delay: 3s;
+}
+
+.bubble:nth-child(4) {
+    --x: 0.4;
+    --tx: -60vw;
+    animation-delay: 2s;
+}
+
+.bubble:nth-child(5) {
+    --x: 0.5;
+    --tx: -40vw;
+    animation-delay: 4s;
+}
+
+.bubble:nth-child(6) {
+    --x: 0.6;
+    --tx: -70vw;
+    animation-delay: 3.5s;
+}
+
+.bubble:nth-child(7) {
+    --x: 0.7;
+    --tx: -20vw;
+    animation-delay: 2.5s;
+}
+
+.bubble:nth-child(8) {
+    --x: 0.8;
+    --tx: -45vw;
+    animation-delay: 4.5s;
+}
+
+.bubble:nth-child(9) {
+    --x: 0.9;
+    --tx: -80vw;
+    animation-delay: 1.5s;
+}
+
+.bubble:nth-child(10) {
+    --x: 0.75;
+    --tx: -55vw;
+    animation-delay: 5s;
+}
